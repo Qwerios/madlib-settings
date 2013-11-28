@@ -2,13 +2,15 @@
     if typeof exports is "object"
         module.exports = factory(
             require "underscore"
+            require "madlib-object-utils"
         )
     else if typeof define is "function" and define.amd
         define( [
             "underscore"
+            "madlib-object-utils"
         ], factory )
 
-)( ( _ ) ->
+)( ( _, objectUtils ) ->
     # The shared settings object
     #
     settings = {}
@@ -41,7 +43,7 @@
             return
 
         get: ( key, valueIfMissing ) ->
-            return settings[ key ] or valueIfMissing
+            return objectUtils.get( key, settings, valueIfMissing )
 
         merge: ( key, data ) ->
             currentData = settings[ key ] or {}
