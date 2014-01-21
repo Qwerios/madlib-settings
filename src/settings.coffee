@@ -43,7 +43,7 @@
             return
 
         get: ( key, valueIfMissing ) ->
-            return objectUtils.get( key, settings, valueIfMissing )
+            return objectUtils.getValue( key, settings, valueIfMissing )
 
         unset: ( key ) ->
             delete settings[ key ] if settings[ key ]?
