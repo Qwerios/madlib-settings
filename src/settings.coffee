@@ -39,7 +39,7 @@
             return
 
         set: ( key, data ) ->
-            settings[ key ] = data
+            objectUtils.setValue( key, settings, data )
             return
 
         get: ( key, valueIfMissing ) ->
