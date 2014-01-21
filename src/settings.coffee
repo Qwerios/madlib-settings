@@ -45,6 +45,13 @@
         get: ( key, valueIfMissing ) ->
             return objectUtils.get( key, settings, valueIfMissing )
 
+        unset: ( key ) ->
+            delete settings[ key ] if settings[ key ]?
+            return
+
+        purge: () ->
+            settings = {}
+
         merge: ( key, data ) ->
             currentData = settings[ key ] or {}
             settings[ key ] = _.extend( currentData, data )
