@@ -34,7 +34,7 @@ settings.init( "timeout", 30000 );
 //
 currentTimeout = settings.get( "timeout", 15000 );
 
-// You remove a single setting or purge all settings (!!)
+// You can remove a single setting or purge all settings (!!) if you are so inclined
 //
 settings.unset( "timeout" );
 settings.pruge()
