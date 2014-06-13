@@ -1,6 +1,6 @@
 {
   "name": "madlib-settings",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Centralised settings for other madlib modules",
   "main": "lib/settings.js",
   "author": {
