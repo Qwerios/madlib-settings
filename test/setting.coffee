@@ -19,5 +19,12 @@ describe( "settings", () ->
             settings.unset( "unset-test" )
             chai.expect( settings.get( "unset-test" ) ).to.eql( undefined )
         )
+
+        it( "Should set raw setting", () ->
+            settings.init( "raw-test", "done" )
+            settings._setRaw( { foo: "bar" } )
+            chai.expect( settings._raw().foo ).to.eql( "bar" )
+            chai.expect( settings._raw()[ "raw-test" ] ).to.eql( undefined )
+        )
     )
 )

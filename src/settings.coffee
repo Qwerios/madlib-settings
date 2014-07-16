@@ -136,4 +136,17 @@
         ###
         _raw: () ->
             return settings
+
+        ###*
+        #   Private method to overwrite actual settings object
+        #
+        #   @function _setRaw
+        #   @private
+        #
+        #   @return {Object}    The raw settings object
+        #
+        ###
+        _setRaw: ( newSettings ) ->
+            settings = _.clone( newSettings )
+            return settings
 )
